@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Robert's Portfolio</title>
   <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -81,9 +82,23 @@
   </style>
 </head>
 <body>
-  <header>
-    <h1>Robert Dieter</h1>
+  <header style="display: flex; align-items: center; justify-content: space-between; padding: 1rem; background: #333; color: white;">
+    <div style="display: flex; align-items: center;">
+      <img src="assets/images/profile.jpg" alt="Profile Photo" style="width: 50px; height: 50px; border-radius: 50%; margin-right: 1rem;" />
+      <h1 style="margin: 0;">Robert's Portfolio</h1>
+    </div>
+    <div style="display: flex; align-items: center; gap: 1rem;">
+      <a href="https://www.linkedin.com/in/robertdieter" target="_blank" style="color: white; text-decoration: none; display: flex; align-items: center; gap: 0.5rem;">
+        <i class="fab fa-linkedin"></i> LinkedIn
+      </a>
+      <span style="color: white;">|</span>
+      <a href="assets/resume.pdf" download style="color: white; text-decoration: none; display: flex; align-items: center; gap: 0.5rem;">
+        <i class="fas fa-file-alt"></i> Resume
+      </a>
+    </div>
   </header>
+
+
 
   <div class="grid">
     <!-- Repeat this block for each project -->
