@@ -102,13 +102,16 @@
 
   <section style="padding: 2rem;">
     <h2 style="text-align: center;">Major Projects</h2>
+    <p style="text-align: center; max-width: 700px; margin: 0 auto 2rem;">
+    These are the cornerstone projects I've built professionally or as part of long-term collaborations. They reflect my strongest work in design, development, and problem-solving.
+    </p>
     <div class="grid">
       <!-- Major project cards -->
       <div class="card" onclick="openModal(0)">
         <img src="assets/images/project0-thumb.jpg" alt="Major Project 0" />
         <h3>Major Project 0</h3>
       </div>
-      <!-- Add more major project cards -->
+      <!-- Add more major project cards here -->
       <div class="card" onclick="openModal(1)">
         <img src="assets/images/project1-thumb.jpg" alt="Major Project 1" />
         <h3>Major Project 1</h3>
@@ -134,13 +137,16 @@
 
   <section style="padding: 2rem; background-color: #eaeaea;">
     <h2 style="text-align: center;">Weekend Projects</h2>
+    <p style="text-align: center; max-width: 700px; margin: 0 auto 2rem;">
+    These are fun experiments, quick builds, and creative ideas I’ve explored in my spare time. They show my curiosity and love for tinkering.
+    </p>
     <div class="grid">
       <!-- Weekend project cards -->
       <div class="card" onclick="openModal(6)">
         <img src="assets/images/project6-thumb.jpg" alt="Weekend Project 6" />
         <h3>Weekend Project 6</h3>
       </div>
-      <!-- Add more weekend project cards -->
+      <!-- Add more weekend project cards here -->
       <div class="card" onclick="openModal(7)">
         <img src="assets/images/project7-thumb.jpg" alt="Weekend Project 7" />
         <h3>Weekend Project 7</h3>
@@ -170,10 +176,10 @@
       <span class="close" onclick="closeModal()">&times;</span>
       <h2 id="modal-title">Project Title</h2>
       <p id="modal-description">Project description goes here.</p>
-      <img id="modal-image1" src="" alt="Project image 1" />
-      <img id="modal-image2" src="" alt="Project image 2" />
+      <div id="modal-images" style="margin-top: 1rem;"></div>
     </div>
   </div>
+
 
   <script>
     const projects = [
@@ -241,23 +247,26 @@
     ];
 
     function openModal(index) {
-      const project = projects[index];
-      document.getElementById("modal-title").textContent = project.title;
-      document.getElementById("modal-description").textContent = project.description;
-      document.getElementById("modal-image1").src = project.images[0];
-      document.getElementById("modal-image2").src = project.images[1];
-      document.getElementById("modal").style.display = "block";
+    const project = projects[index];
+    document.getElementById("modal-title").textContent = project.title;
+    document.getElementById("modal-description").textContent = project.description;
+
+    const imageContainer = document.getElementById("modal-images");
+    imageContainer.innerHTML = ""; // Clear previous images
+
+    project.images.forEach(src => {
+        const img = document.createElement("img");
+        img.src = src;
+        img.alt = project.title;
+        img.style.width = "100%";
+        img.style.marginTop = "1rem";
+        img.style.borderRadius = "4px";
+        imageContainer.appendChild(img);
+    });
+
+    document.getElementById("modal").style.display = "block";
     }
 
-    function closeModal() {
-      document.getElementById("modal").style.display = "none";
-    }
-
-    window.onclick = function(event) {
-      if (event.target == document.getElementById("modal")) {
-        closeModal();
-      }
-    }
   </script>
 </body>
 </html>
