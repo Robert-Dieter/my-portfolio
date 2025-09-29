@@ -100,23 +100,69 @@
 
 
 
-  <div class="grid">
-    <!-- Repeat this block for each project -->
-    <div class="card" onclick="openModal(0)">
-      <img src="assets/images/project0-thumb.jpg" alt="Project 0" />
-      <h3>Project Title 0</h3>
+  <section style="padding: 2rem;">
+    <h2 style="text-align: center;">Major Projects</h2>
+    <div class="grid">
+      <!-- Major project cards -->
+      <div class="card" onclick="openModal(0)">
+        <img src="assets/images/project0-thumb.jpg" alt="Major Project 0" />
+        <h3>Major Project 0</h3>
+      </div>
+      <!-- Add more major project cards -->
+      <div class="card" onclick="openModal(1)">
+        <img src="assets/images/project1-thumb.jpg" alt="Major Project 1" />
+        <h3>Major Project 1</h3>
+      </div>
+      <div class="card" onclick="openModal(2)">
+        <img src="assets/images/project2-thumb.jpg" alt="Major Project 2" />
+        <h3>Major Project 2</h3>
+      </div>
+      <div class="card" onclick="openModal(3)">
+        <img src="assets/images/project3-thumb.jpg" alt="Major Project 3" />
+        <h3>Major Project 3</h3>
+      </div>
+      <div class="card" onclick="openModal(4)">
+        <img src="assets/images/project4-thumb.jpg" alt="Major Project 4" />
+        <h3>Major Project 4</h3>
+      </div>
+      <div class="card" onclick="openModal(1)">
+        <img src="assets/images/project1-thumb.jpg" alt="Major Project 5" />
+        <h3>Major Project 5</h3>
+      </div> 
     </div>
-    <!-- Add 11 more cards with unique indexes -->
-    <!-- Example: openModal(1), openModal(2), etc. -->
-     <div class="card" onclick="openModal(1)">
-      <img src="assets/images/project1-thumb.jpg" alt="Project 1" />
-      <h3>Project Title 1</h3>
+  </section>
+
+  <section style="padding: 2rem; background-color: #eaeaea;">
+    <h2 style="text-align: center;">Weekend Projects</h2>
+    <div class="grid">
+      <!-- Weekend project cards -->
+      <div class="card" onclick="openModal(6)">
+        <img src="assets/images/project6-thumb.jpg" alt="Weekend Project 1" />
+        <h3>Weekend Project 1</h3>
+      </div>
+      <!-- Add more weekend project cards -->
+      <div class="card" onclick="openModal(7)">
+        <img src="assets/images/project7-thumb.jpg" alt="Weekend Project 7" />
+        <h3>Weekend Project 7</h3>
+      </div>
+      <div class="card" onclick="openModal(8)">
+        <img src="assets/images/project8-thumb.jpg" alt="Weekend Project 8" />
+        <h3>Weekend Project 8</h3>
+      </div>
+      <div class="card" onclick="openModal(9)">
+        <img src="assets/images/project9-thumb.jpg" alt="Weekend Project 9" />
+        <h3>Weekend Project 9</h3>
+      </div>
+      <div class="card" onclick="openModal(10)">
+        <img src="assets/images/project10-thumb.jpg" alt="Weekend Project 10" />
+        <h3>Weekend Project 10</h3>
+      </div>
+      <div class="card" onclick="openModal(11)">
+        <img src="assets/images/project11-thumb.jpg" alt="Weekend Project 11" />
+        <h3>Weekend Project 11</h3>
+      </div>
     </div>
-    <div class="card" onclick="openModal(2)">
-      <img src="assets/images/project2-thumb.jpg" alt="Project 2" />
-      <h3>Project Title 2</h3>
-    </div>
-  </div>
+  </section>
 
   <!-- Modals -->
   <div id="modal" class="modal">
@@ -132,20 +178,65 @@
   <script>
     const projects = [
       {
-        title: "Project Title 0",
+        title: "Major Project 0",
         description: "Detailed description of Project 0.",
         images: ["assets/images/project0-1.jpg", "assets/images/project0-2.jpg"]
       },
-      // Add 11 more project objects here
+      // Add more project objects here
       {
-        title: "Project Title 1",
+        title: "Major Project 1",
         description: "Detailed description of Project 1.",
         images: ["assets/images/project1-1.jpg", "assets/images/project1-2.jpg"]
       },
       {
-        title: "Project Title 2",
+        title: "Major Project 2",
         description: "Detailed description of Project 2.",
         images: ["assets/images/project2-1.jpg", "assets/images/project2-2.jpg"]
+      },
+      {
+        title: "Major Project 3",
+        description: "Detailed description of Project 3.",
+        images: ["assets/images/project3-1.jpg", "assets/images/project3-2.jpg"]
+      },
+      {
+        title: "Major Project 4",
+        description: "Detailed description of Project 4.",
+        images: ["assets/images/project4-1.jpg", "assets/images/project4-2.jpg"]
+      },
+      {
+        title: "Major Project 5",
+        description: "Detailed description of Project 5.",
+        images: ["assets/images/project5-1.jpg", "assets/images/project5-2.jpg"]
+      },
+      {
+        title: "Major Project 6",
+        description: "Detailed description of Project 6.",
+        images: ["assets/images/project6-1.jpg", "assets/images/project6-2.jpg"]
+      },
+      {
+        title: "Major Project 7",
+        description: "Detailed description of Project 7.",
+        images: ["assets/images/project7-1.jpg", "assets/images/project7-2.jpg"]
+      },
+      {
+        title: "Major Project 8",
+        description: "Detailed description of Project 8.",
+        images: ["assets/images/project8-1.jpg", "assets/images/project8-2.jpg"]
+      },
+      {
+        title: "Major Project 9",
+        description: "Detailed description of Project 9.",
+        images: ["assets/images/project9-1.jpg", "assets/images/project9-2.jpg"]
+      },
+      {
+        title: "Major Project 10",
+        description: "Detailed description of Project 10.",
+        images: ["assets/images/project10-1.jpg", "assets/images/project10-2.jpg"]
+      },
+      {
+        title: "Major Project 11",
+        description: "Detailed description of Project 11.",
+        images: ["assets/images/project11-1.jpg", "assets/images/project11-2.jpg"]
       },
     ];
 
