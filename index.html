@@ -184,88 +184,143 @@
   <script>
     const projects = [
       {
-        title: "Major Project 0",
-        description: "Detailed description of Project 0.",
-        images: ["assets/images/project0-1.jpg", "assets/images/project0-2.jpg"]
+          title: "Major Project 0",
+          content: [
+          { type: "text", value: "This project was built to solve X using Y. It involved extensive research and prototyping." },
+          { type: "image", src: "assets/images/project0-1.jpg" },
+          { type: "text", value: "One of the key challenges was integrating with legacy systems, which required custom middleware." },
+          { type: "image", src: "assets/images/project0-1.jpg" }
+          ]
       },
       // Add more project objects here
       {
-        title: "Major Project 1",
-        description: "Detailed description of Project 1.",
-        images: ["assets/images/project1-1.jpg", "assets/images/project1-2.jpg"]
+          title: "Major Project 1",
+          content: [
+          { type: "text", value: "This project was built to solve X using Y. It involved extensive research and prototyping." },
+          { type: "image", src: "assets/images/project1-1.jpg" },
+          { type: "text", value: "One of the key challenges was integrating with legacy systems, which required custom middleware." },
+          { type: "image", src: "assets/images/project1-1.jpg" }
+          ]
       },
       {
-        title: "Major Project 2",
-        description: "Detailed description of Project 2.",
-        images: ["assets/images/project2-1.jpg", "assets/images/project2-2.jpg"]
+          title: "Major Project 2",
+          content: [
+          { type: "text", value: "This project was built to solve X using Y. It involved extensive research and prototyping." },
+          { type: "image", src: "assets/images/project2-1.jpg" },
+          { type: "text", value: "One of the key challenges was integrating with legacy systems, which required custom middleware." },
+          { type: "image", src: "assets/images/project2-1.jpg" }
+          ]
       },
       {
-        title: "Major Project 3",
-        description: "Detailed description of Project 3.",
-        images: ["assets/images/project3-1.jpg", "assets/images/project3-2.jpg"]
+          title: "Major Project 3",
+          content: [
+          { type: "text", value: "This project was built to solve X using Y. It involved extensive research and prototyping." },
+          { type: "image", src: "assets/images/project3-1.jpg" },
+          { type: "text", value: "One of the key challenges was integrating with legacy systems, which required custom middleware." },
+          { type: "image", src: "assets/images/project3-1.jpg" }
+          ]
       },
       {
-        title: "Major Project 4",
-        description: "Detailed description of Project 4.",
-        images: ["assets/images/project4-1.jpg", "assets/images/project4-2.jpg"]
+          title: "Major Project 4",
+          content: [
+          { type: "text", value: "This project was built to solve X using Y. It involved extensive research and prototyping." },
+          { type: "image", src: "assets/images/project4-1.jpg" },
+          { type: "text", value: "One of the key challenges was integrating with legacy systems, which required custom middleware." },
+          { type: "image", src: "assets/images/project4-1.jpg" }
+          ]
       },
       {
-        title: "Major Project 5",
-        description: "Detailed description of Project 5.",
-        images: ["assets/images/project5-1.jpg", "assets/images/project5-2.jpg"]
+          title: "Major Project 5",
+          content: [
+          { type: "text", value: "This project was built to solve X using Y. It involved extensive research and prototyping." },
+          { type: "image", src: "assets/images/project5-1.jpg" },
+          { type: "text", value: "One of the key challenges was integrating with legacy systems, which required custom middleware." },
+          { type: "image", src: "assets/images/project5-1.jpg" }
+          ]
       },
       {
-        title: "Major Project 6",
-        description: "Detailed description of Project 6.",
-        images: ["assets/images/project6-1.jpg", "assets/images/project6-2.jpg"]
+          title: "Weekend Project 6",
+          content: [
+          { type: "text", value: "This project was built to solve X using Y. It involved extensive research and prototyping." },
+          { type: "image", src: "assets/images/project6-1.jpg" },
+          { type: "text", value: "One of the key challenges was integrating with legacy systems, which required custom middleware." },
+          { type: "image", src: "assets/images/project6-1.jpg" }
+          ]
       },
       {
-        title: "Major Project 7",
-        description: "Detailed description of Project 7.",
-        images: ["assets/images/project7-1.jpg", "assets/images/project7-2.jpg"]
+          title: "Weekend Project 7",
+          content: [
+          { type: "text", value: "This project was built to solve X using Y. It involved extensive research and prototyping." },
+          { type: "image", src: "assets/images/project7-1.jpg" },
+          { type: "text", value: "One of the key challenges was integrating with legacy systems, which required custom middleware." },
+          { type: "image", src: "assets/images/project7-1.jpg" }
+          ]
       },
       {
-        title: "Major Project 8",
-        description: "Detailed description of Project 8.",
-        images: ["assets/images/project8-1.jpg", "assets/images/project8-2.jpg"]
+          title: "Weekend Project 8",
+          content: [
+          { type: "text", value: "This project was built to solve X using Y. It involved extensive research and prototyping." },
+          { type: "image", src: "assets/images/project8-1.jpg" },
+          { type: "text", value: "One of the key challenges was integrating with legacy systems, which required custom middleware." },
+          { type: "image", src: "assets/images/project8-1.jpg" }
+          ]
       },
       {
-        title: "Major Project 9",
-        description: "Detailed description of Project 9.",
-        images: ["assets/images/project9-1.jpg", "assets/images/project9-2.jpg"]
+          title: "Weekend Project 9",
+          content: [
+          { type: "text", value: "This project was built to solve X using Y. It involved extensive research and prototyping." },
+          { type: "image", src: "assets/images/project9-1.jpg" },
+          { type: "text", value: "One of the key challenges was integrating with legacy systems, which required custom middleware." },
+          { type: "image", src: "assets/images/project9-1.jpg" }
+          ]
       },
       {
-        title: "Major Project 10",
-        description: "Detailed description of Project 10.",
-        images: ["assets/images/project10-1.jpg", "assets/images/project10-2.jpg"]
+          title: "Weekend Project 10",
+          content: [
+          { type: "text", value: "This project was built to solve X using Y. It involved extensive research and prototyping." },
+          { type: "image", src: "assets/images/project10-1.jpg" },
+          { type: "text", value: "One of the key challenges was integrating with legacy systems, which required custom middleware." },
+          { type: "image", src: "assets/images/project10-1.jpg" }
+          ]
       },
       {
-        title: "Major Project 11",
-        description: "Detailed description of Project 11.",
-        images: ["assets/images/project11-1.jpg", "assets/images/project11-2.jpg"]
+          title: "Weekend Project 11",
+          content: [
+          { type: "text", value: "This project was built to solve X using Y. It involved extensive research and prototyping." },
+          { type: "image", src: "assets/images/project11-1.jpg" },
+          { type: "text", value: "One of the key challenges was integrating with legacy systems, which required custom middleware." },
+          { type: "image", src: "assets/images/project11-1.jpg" }
+          ]
       },
     ];
 
     function openModal(index) {
     const project = projects[index];
     document.getElementById("modal-title").textContent = project.title;
-    document.getElementById("modal-description").textContent = project.description;
 
     const imageContainer = document.getElementById("modal-images");
-    imageContainer.innerHTML = ""; // Clear previous images
+    imageContainer.innerHTML = "";
 
-    project.images.forEach(src => {
+    project.content.forEach(block => {
+        if (block.type === "text") {
+        const p = document.createElement("p");
+        p.textContent = block.value;
+        p.style.marginTop = "1rem";
+        imageContainer.appendChild(p);
+        } else if (block.type === "image") {
         const img = document.createElement("img");
-        img.src = src;
+        img.src = block.src;
         img.alt = project.title;
         img.style.width = "100%";
         img.style.marginTop = "1rem";
         img.style.borderRadius = "4px";
         imageContainer.appendChild(img);
+        }
     });
 
     document.getElementById("modal").style.display = "block";
     }
+
 
     function closeModal() {
     document.getElementById("modal").style.display = "none";
