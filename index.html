@@ -54,6 +54,7 @@
       height: 100%;
       overflow: auto;
       background: rgba(0,0,0,0.8);
+      cursor: pointer;
     }
     .modal-content {
       background: white;
@@ -63,6 +64,7 @@
       max-width: 800px;
       border-radius: 8px;
       position: relative;
+      cursor: default;
     }
     .modal-content h2 {
       margin-top: 0;
@@ -175,10 +177,10 @@
     <div class="modal-content">
       <span class="close" onclick="closeModal()">&times;</span>
       <h2 id="modal-title">Project Title</h2>
-      <p id="modal-description">Project description goes here.</p>
-      <div id="modal-images" style="margin-top: 1rem;"></div>
+      <div id="modal-images"></div>
     </div>
   </div>
+
 
 
   <script>
@@ -326,6 +328,19 @@
     document.getElementById("modal").style.display = "none";
     document.getElementById("modal-images").innerHTML = ""; // Clear images
     }
+
+    window.onclick = function(event) {
+    const modal = document.getElementById("modal");
+    if (event.target === modal) {
+        closeModal();
+    }
+    };
+
+    document.addEventListener("keydown", function(event) {
+    if (event.key === "Escape") {
+        closeModal();
+    }
+    });
 
 
   </script>
