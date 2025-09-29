@@ -82,17 +82,25 @@
 </head>
 <body>
   <header>
-    <h1>My Portfolio</h1>
+    <h1>Robert Dieter</h1>
   </header>
 
   <div class="grid">
     <!-- Repeat this block for each project -->
     <div class="card" onclick="openModal(0)">
-      <img src="images/project1-thumb.jpg" alt="Project 1" />
-      <h3>Project Title 1</h3>
+      <img src="assets/images/project0-thumb.jpg" alt="Project 0" />
+      <h3>Project Title 0</h3>
     </div>
     <!-- Add 11 more cards with unique indexes -->
     <!-- Example: openModal(1), openModal(2), etc. -->
+     <div class="card" onclick="openModal(1)">
+      <img src="assets/images/project1-thumb.jpg" alt="Project 1" />
+      <h3>Project Title 1</h3>
+    </div>
+    <div class="card" onclick="openModal(2)">
+      <img src="assets/images/project2-thumb.jpg" alt="Project 2" />
+      <h3>Project Title 2</h3>
+    </div>
   </div>
 
   <!-- Modals -->
@@ -109,11 +117,21 @@
   <script>
     const projects = [
       {
-        title: "Project Title 1",
-        description: "Detailed description of Project 1.",
-        images: ["images/project1-1.jpg", "images/project1-2.jpg"]
+        title: "Project Title 0",
+        description: "Detailed description of Project 0.",
+        images: ["assets/images/project0-1.jpg", "assets/images/project0-2.jpg"]
       },
       // Add 11 more project objects here
+      {
+        title: "Project Title 1",
+        description: "Detailed description of Project 1.",
+        images: ["assets/images/project1-1.jpg", "assets/images/project1-2.jpg"]
+      },
+      {
+        title: "Project Title 2",
+        description: "Detailed description of Project 2.",
+        images: ["assets/images/project2-1.jpg", "assets/images/project2-2.jpg"]
+      },
     ];
 
     function openModal(index) {
