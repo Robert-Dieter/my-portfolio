@@ -81,6 +81,28 @@
       font-size: 1.5rem;
       cursor: pointer;
     }
+    .tag-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+    }
+
+    .tag {
+    padding: 0.3rem 0.6rem;
+    border-radius: 12px;
+    font-size: 0.85rem;
+    font-weight: bold;
+    color: white;
+    background-color: #666;
+    }
+
+    /* Optional: color by tag name */
+    .tag[data-skill="SolidWorks"] { background-color: #0077b6; }
+    .tag[data-skill="3D Printing"] { background-color: #ff6f00; }
+    .tag[data-skill="CAD"] { background-color: #6a4c93; }
+    /* Add more as needed */
+
   </style>
 </head>
 <body>
@@ -217,6 +239,7 @@
     const projects = [
       {
           title: "Major Project 0",
+          tags: ["SolidWorks", "3D Printing", "CAD"],
           content: [
           { type: "text", value: "This project was built to solve X using Y. It involved extensive research and prototyping." },
           { type: "image", src: "assets/images/project0-1.jpg" },
@@ -227,6 +250,7 @@
       // Add more project objects here
       {
           title: "Major Project 1",
+          tags: ["Skill0", "Skill1", "Skill2"],
           content: [
           { type: "text", value: "This project was built to solve X using Y. It involved extensive research and prototyping." },
           { type: "image", src: "assets/images/project1-1.jpg" },
@@ -236,6 +260,7 @@
       },
       {
           title: "Major Project 2",
+          tags: ["Skill0", "Skill1", "Skill2"],
           content: [
           { type: "text", value: "This project was built to solve X using Y. It involved extensive research and prototyping." },
           { type: "image", src: "assets/images/project2-1.jpg" },
@@ -245,6 +270,7 @@
       },
       {
           title: "Major Project 3",
+          tags: ["Skill0", "Skill1", "Skill2"],
           content: [
           { type: "text", value: "This project was built to solve X using Y. It involved extensive research and prototyping." },
           { type: "image", src: "assets/images/project3-1.jpg" },
@@ -254,6 +280,7 @@
       },
       {
           title: "Major Project 4",
+          tags: ["Skill0", "Skill1", "Skill2"],
           content: [
           { type: "text", value: "This project was built to solve X using Y. It involved extensive research and prototyping." },
           { type: "image", src: "assets/images/project4-1.jpg" },
@@ -263,6 +290,7 @@
       },
       {
           title: "Major Project 5",
+          tags: ["Skill0", "Skill1", "Skill2"],
           content: [
           { type: "text", value: "This project was built to solve X using Y. It involved extensive research and prototyping." },
           { type: "image", src: "assets/images/project5-1.jpg" },
@@ -272,6 +300,7 @@
       },
       {
           title: "Weekend Project 6",
+          tags: ["Skill0", "Skill1", "Skill2"],
           content: [
           { type: "text", value: "This project was built to solve X using Y. It involved extensive research and prototyping." },
           { type: "image", src: "assets/images/project6-1.jpg" },
@@ -281,6 +310,7 @@
       },
       {
           title: "Weekend Project 7",
+          tags: ["Skill0", "Skill1", "Skill2"],
           content: [
           { type: "text", value: "This project was built to solve X using Y. It involved extensive research and prototyping." },
           { type: "image", src: "assets/images/project7-1.jpg" },
@@ -290,6 +320,7 @@
       },
       {
           title: "Weekend Project 8",
+          tags: ["Skill0", "Skill1", "Skill2"],
           content: [
           { type: "text", value: "This project was built to solve X using Y. It involved extensive research and prototyping." },
           { type: "image", src: "assets/images/project8-1.jpg" },
@@ -299,6 +330,7 @@
       },
       {
           title: "Weekend Project 9",
+          tags: ["Skill0", "Skill1", "Skill2"],
           content: [
           { type: "text", value: "This project was built to solve X using Y. It involved extensive research and prototyping." },
           { type: "image", src: "assets/images/project9-1.jpg" },
@@ -308,6 +340,7 @@
       },
       {
           title: "Weekend Project 10",
+          tags: ["Skill0", "Skill1", "Skill2"],
           content: [
           { type: "text", value: "This project was built to solve X using Y. It involved extensive research and prototyping." },
           { type: "image", src: "assets/images/project10-1.jpg" },
@@ -317,6 +350,7 @@
       },
       {
           title: "Weekend Project 11",
+          tags: ["Skill0", "Skill1", "Skill2"],
           content: [
           { type: "text", value: "This project was built to solve X using Y. It involved extensive research and prototyping." },
           { type: "image", src: "assets/images/project11-1.jpg" },
@@ -326,6 +360,7 @@
       },
       {
           title: "Weekend Project 12",
+          tags: ["Skill0", "Skill1", "Skill2"],
           content: [
           { type: "text", value: "This project was built to solve X using Y. It involved extensive research and prototyping." },
           { type: "image", src: "assets/images/project11-1.jpg" },
@@ -335,6 +370,7 @@
       },
       {
           title: "Weekend Project 13",
+          tags: ["Skill0", "Skill1", "Skill2"],
           content: [
           { type: "text", value: "This project was built to solve X using Y. It involved extensive research and prototyping." },
           { type: "image", src: "assets/images/project11-1.jpg" },
@@ -351,6 +387,21 @@
     const imageContainer = document.getElementById("modal-images");
     imageContainer.innerHTML = "";
 
+    // Render skill tags (chips)
+    if (project.tags && project.tags.length > 0) {
+        const tagContainer = document.createElement("div");
+        tagContainer.className = "tag-container";
+        project.tags.forEach(tag => {
+        const span = document.createElement("span");
+        span.className = "tag";
+        span.textContent = tag;
+        span.setAttribute("data-skill", tag);
+        tagContainer.appendChild(span);
+        });
+        imageContainer.appendChild(tagContainer);
+    }
+
+    // Render content blocks
     project.content.forEach(block => {
         if (block.type === "text") {
         const p = document.createElement("p");
@@ -370,6 +421,7 @@
 
     document.getElementById("modal").style.display = "block";
     }
+
 
 
     function closeModal() {
