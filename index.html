@@ -100,6 +100,28 @@
     </div>
   </header>
 
+<!-- 
+  NOTE TO FUTURE SELF: IF YOU WISH TO ADD CARDS, DO THE FOLLOWING:
+  1. Add more cards to the corresponding grid (Major Projects/Weekend Projects)
+        - Copy/paste the existing block, i.e. 
+            <div class="card" onclick="openModal(9)">
+                <img src="assets/images/project9-thumb.jpg" alt="Weekend Project 9" />
+                <h3>Weekend Project 9</h3>
+            </div>
+        - Increment the index in openModal(n)
+  2. Update the 'projects' array in the <script> JavaScript block 
+        - Copy/paste the existing block, i.e.
+            {
+                title: "Major Project 1",
+                content: [
+                { type: "text", value: "Intro to Major Project 1..." },
+                { type: "image", src: "assets/images/major1-1.jpg" },
+                { type: "text", value: "More details..." },
+                { type: "image", src: "assets/images/major1-2.jpg" }
+                ]
+            },
+        - Make sure the index in openModal(n) matches the position of the project in the array
+-->
 
 
   <section style="padding: 2rem;">
@@ -134,6 +156,14 @@
         <img src="assets/images/project5-thumb.jpg" alt="Major Project 5" />
         <h3>Major Project 5</h3>
       </div> 
+      <div class="card" onclick="openModal(6)">
+        <img src="assets/images/project6-thumb.jpg" alt="Major Project 6" />
+        <h3>Major Project 6</h3>
+      </div>
+      <div class="card" onclick="openModal(7)">
+        <img src="assets/images/project7-thumb.jpg" alt="Major Project 7" />
+        <h3>Major Project 7</h3>
+      </div> 
     </div>
   </section>
 
@@ -144,19 +174,11 @@
     </p>
     <div class="grid">
       <!-- Weekend project cards -->
-      <div class="card" onclick="openModal(6)">
-        <img src="assets/images/project6-thumb.jpg" alt="Weekend Project 6" />
-        <h3>Weekend Project 6</h3>
-      </div>
-      <!-- Add more weekend project cards here -->
-      <div class="card" onclick="openModal(7)">
-        <img src="assets/images/project7-thumb.jpg" alt="Weekend Project 7" />
-        <h3>Weekend Project 7</h3>
-      </div>
       <div class="card" onclick="openModal(8)">
         <img src="assets/images/project8-thumb.jpg" alt="Weekend Project 8" />
         <h3>Weekend Project 8</h3>
       </div>
+      <!-- Add more weekend project cards here -->
       <div class="card" onclick="openModal(9)">
         <img src="assets/images/project9-thumb.jpg" alt="Weekend Project 9" />
         <h3>Weekend Project 9</h3>
@@ -168,6 +190,14 @@
       <div class="card" onclick="openModal(11)">
         <img src="assets/images/project11-thumb.jpg" alt="Weekend Project 11" />
         <h3>Weekend Project 11</h3>
+      </div>
+      <div class="card" onclick="openModal(12)">
+        <img src="assets/images/project11-thumb.jpg" alt="Weekend Project 12" />
+        <h3>Weekend Project 12</h3>
+      </div>
+      <div class="card" onclick="openModal(13)">
+        <img src="assets/images/project11-thumb.jpg" alt="Weekend Project 13" />
+        <h3>Weekend Project 13</h3>
       </div>
     </div>
   </section>
@@ -287,6 +317,24 @@
       },
       {
           title: "Weekend Project 11",
+          content: [
+          { type: "text", value: "This project was built to solve X using Y. It involved extensive research and prototyping." },
+          { type: "image", src: "assets/images/project11-1.jpg" },
+          { type: "text", value: "One of the key challenges was integrating with legacy systems, which required custom middleware." },
+          { type: "image", src: "assets/images/project11-1.jpg" }
+          ]
+      },
+      {
+          title: "Weekend Project 12",
+          content: [
+          { type: "text", value: "This project was built to solve X using Y. It involved extensive research and prototyping." },
+          { type: "image", src: "assets/images/project11-1.jpg" },
+          { type: "text", value: "One of the key challenges was integrating with legacy systems, which required custom middleware." },
+          { type: "image", src: "assets/images/project11-1.jpg" }
+          ]
+      },
+      {
+          title: "Weekend Project 13",
           content: [
           { type: "text", value: "This project was built to solve X using Y. It involved extensive research and prototyping." },
           { type: "image", src: "assets/images/project11-1.jpg" },
