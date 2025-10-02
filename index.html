@@ -188,7 +188,7 @@
       <div class="hero-text">
         <h2>My Portfolio</h2>
         <p>
-          Hi, I'm Robert! Thanks for stopping by. My résumé certainly shares a lot about me (like my degrees, skills, and work experiences), but that's only half the story!
+          Hi, I'm Robert! Thanks for stopping by. I'm a mechanical design engineer. My résumé certainly shares a lot about me (like my degrees, skills, and work experiences), but that's only half the story!
         <p>
         <p>
           This portfolio highlights the other half, proudly showcasing my work in engineering, design, and creative problem-solving. Feel free to explore some of my favorite projects, big and small. Each one exemplifies my curiosity and attention to detail.
@@ -234,7 +234,7 @@
       </div>
       <!-- Add more major project cards here -->
       <div class="card" onclick="openModal(1)">
-        <img src="assets/images/project1-thumb.jpg" alt="The Cosmic Cone" />
+        <img src="assets/images/cosmic-cone/cosmic-cone-4.jpg" alt="The Cosmic Cone" />
         <h3>The Cosmic Cone</h3>
       </div>
       <div class="card" onclick="openModal(2)">
@@ -327,10 +327,17 @@
           title: "The Cosmic Cone",
           tags: ["NX", "3-Axis CNC", "Injection Molding", "GD&T"],
           content: [
-          { type: "text", value: "This project was built to solve X using Y. It involved extensive research and prototyping." },
-          { type: "image", src: "assets/images/project1-1.jpg" },
-          { type: "text", value: "One of the key challenges was integrating with legacy systems, which required custom middleware." },
-          { type: "image", src: "assets/images/project1-1.jpg" }
+          { type: "text", value: "For this project, my team and I designed and manufactured a small product from scratch. After generating our idea for the Cosmic Cone - an ice cream cone featuring the earth and moon - we sketched out the rough geometry and designed it in CAD."},
+          { type: "image", src: "assets/images/cosmic-cone/cosmic-cone-5.jpg" },
+          { type: "text", value: "The design utilizes a two-part assembly with pins and holes, properly toleranced to ensure an interferance fit. Next, we programmed the milling operations to create two sets of cores and cavities on a 3-axis CNC machine." },
+          { type: "image", src: "assets/images/cosmic-cone/cosmic-cone-1.jpg" },
+          { type: "text", value: "After hours in the shop, we had the four parts to our molds." },
+          { type: "image", src: "assets/images/cosmic-cone/cosmic-cone-2.jpg" },
+          { type: "text", value: "With the molds ready, we calibrated the injection molding machine to hone in on the proper temperature and injection time. After establishing the optimal values, we ran a production batch of 50+ assemblies, achieving a cycle time of approximately one minute per piece." },
+          { type: "image", src: "assets/images/cosmic-cone/cosmic-cone-3.jpg" },
+          { type: "text", value: "Finally, we assembled the parts and measured specific dimensions on each to determine if we were on-spec with our designed values." },
+          { type: "image", src: "assets/images/cosmic-cone/cosmic-cone-4.jpg" },
+          { type: "text", value: "My team's full report can be downloaded <a href='assets/images/cosmic-cone/ME340-2_Final_Report_Cosmic-Cone.docx' target='_blank'>here</a>." }
           ]
       },
       {
@@ -505,7 +512,7 @@
     project.content.forEach(block => {
         if (block.type === "text") {
         const p = document.createElement("p");
-        p.textContent = block.value;
+        p.innerHTML = block.value;
         p.style.marginTop = "1rem";
         imageContainer.appendChild(p);
         } else if (block.type === "image") {
