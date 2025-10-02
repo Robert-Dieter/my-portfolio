@@ -149,8 +149,8 @@
     /* Optional: color by tag name */
     .tag[data-skill="SolidWorks"] { background-color: #0077b6; }
     .tag[data-skill="3D Printing"] { background-color: #ff6f00; }
-    .tag[data-skill="CAD"] { background-color: #6a4c93; }
-    .tag[data-skill="3-Axis CNC"] { background-color: #84DCC6; }
+    .tag[data-skill="Electronics"] { background-color: #6a4c93; }
+    .tag[data-skill="f"] { background-color: #84DCC6; }
     .tag[data-skill="NX"] { background-color: #FF4D80; }
     .tag[data-skill="Injection Molding"] { background-color: #BBBDF6; }
     .tag[data-skill="GD&T"] { background-color: #00C49A; }
@@ -160,7 +160,7 @@
     .tag[data-skill="b"] { background-color: #BBBDF6; }
     .tag[data-skill="c&T"] { background-color: #E2ADF2; }
     .tag[data-skill="d"] { background-color: #006C67; }
-    .tag[data-skill="e"] { background-color: #2F97C1; }
+    .tag[data-skill="3-Axis CNC"] { background-color: #2F97C1; }
     /* Add more as needed */
 
   </style>
@@ -229,8 +229,8 @@
     <div class="grid">
       <!-- Major project cards -->
       <div class="card" onclick="openModal(0)">
-        <img src="assets/images/project0-thumb.jpg" alt="Major Project 0" />
-        <h3>Major Project 0</h3>
+        <img src="assets/images/capstone/capstone-1.jpg" alt="Simulated Carwash Training System" />
+        <h3>Simulated Carwash Training System</h3>
       </div>
       <!-- Add more major project cards here -->
       <div class="card" onclick="openModal(1)">
@@ -313,13 +313,17 @@
   <script>
     const projects = [
       {
-          title: "Major Project 0",
-          tags: ["SolidWorks", "3D Printing", "CAD"],
+          title: "Simulated Carwash Training System",
+          tags: ["SolidWorks", "3D Printing", "Electronics"],
           content: [
-          { type: "text", value: "This project was built to solve X using Y. It involved extensive research and prototyping." },
-          { type: "image", src: "assets/images/project0-1.jpg" },
-          { type: "text", value: "One of the key challenges was integrating with legacy systems, which required custom middleware." },
-          { type: "image", src: "assets/images/project0-1.jpg" }
+          { type: "text", value: "Approached by National Carwash Solutions (NCS) to build a device that could safely train newly-hired technicians on electrical failures common in carwashes, our team spent 6+ months developing a portable electronics training board." },
+          { type: "text", value: "To understand how carwashes break down, we first researched how carwashes function normally. This involved visiting a carwash and exploring the back room with the electronics, hyrdaulics, and more." },
+          { type: "image", src: "assets/images/capstone/capstone-2.jpg" },
+          { type: "text", value: "Next, we refined the critical system of our design: simulating errors. We focused on the three most common errors and created specific learning objectives that our board conveyed. The board included real-world components that a technican would see in the field (PLC, relays, etc.), in addition to scaled-down components for items too large to fit on the board (rotary encoder, etc.). Custom mounts, brackets, and even the scaled-down components were designed in SolidWorks and 3D Printed." },
+          { type: "image", src: "assets/images/capstone/capstone-3.jpg" },
+          { type: "text", value: "With the critical system developed, we spent several months adding more errors, increasing realism, and increasing portability. Our final design, which fits into a Pelican case for easy air travel, has the capacity to simulate almost a dozen electrical faults that occur on real carwashes. Its layout mirrors that of a real carwash, and it has color-coded sections and 3D-printed components to further increase understanding." },
+          { type: "image", src: "assets/images/capstone/capstone-4.jpg" },
+          { type: "text", value: "I'd be happy to share a video demonstration, final presentation, project report, or weekly status report upon request." },
           ]
       },
       // Add more project objects here
@@ -516,13 +520,16 @@
         p.style.marginTop = "1rem";
         imageContainer.appendChild(p);
         } else if (block.type === "image") {
-        const img = document.createElement("img");
-        img.src = block.src;
-        img.alt = project.title;
-        img.style.width = "100%";
-        img.style.marginTop = "1rem";
-        img.style.borderRadius = "4px";
-        imageContainer.appendChild(img);
+          const img = document.createElement("img");
+          img.src = block.src;
+          img.alt = project.title;
+          img.style.width = "50%";
+          img.style.marginTop = "1rem";
+          img.style.borderRadius = "4px";
+          img.style.display = "block";
+          img.style.marginLeft = "auto";
+          img.style.marginRight = "auto";
+          imageContainer.appendChild(img);
         }
     });
 
