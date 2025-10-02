@@ -285,8 +285,8 @@
         <h3>Weekend Project 10</h3>
       </div>
       <div class="card" onclick="openModal(11)">
-        <img src="assets/images/project11-thumb.jpg" alt="Weekend Project 11" />
-        <h3>Weekend Project 11</h3>
+        <img src="assets/images/halloween/halloween-1.jpg" alt="Eye-Tracking Portrait" />
+        <h3>Eye-Tracking Portrait</h3>
       </div>
       <div class="card" onclick="openModal(12)">
         <img src="assets/images/project11-thumb.jpg" alt="Weekend Project 12" />
@@ -439,13 +439,15 @@
           ]
       },
       {
-          title: "Weekend Project 11",
-          tags: ["Skill0", "Skill1", "Skill2"],
+          title: "Eye-Tracking Portrait",
+          tags: ["Electronics"],
           content: [
-          { type: "text", value: "This project was built to solve X using Y. It involved extensive research and prototyping." },
-          { type: "image", src: "assets/images/project11-1.jpg" },
-          { type: "text", value: "One of the key challenges was integrating with legacy systems, which required custom middleware." },
-          { type: "image", src: "assets/images/project11-1.jpg" }
+          { type: "text", value: "For this project, I was inspired by portraits in Scooby-Doo films, with eyes that follow the characters across the screen. Built for a Halloween party, this spooky-eyed portrait uses simple HC-SR04 ultraonic sensors and two circular displays to achieve the eye-tracking effect." },
+          { type: "image", src: "assets/images/halloween/halloween-1.jpg" },
+          { type: "text", value: "Watch the demo and you'll see what I mean!" },
+          { type: "video", src: "assets/images/halloween/demo-video.mp4"},
+          { type: "text", value: "As you can see, the circuit is very simple. All the connections are soldered for durability." },
+          { type: "image", src: "assets/images/halloween/wiring-diagram.jpg" }
           ]
       },
       {
@@ -530,7 +532,18 @@
           img.style.marginLeft = "auto";
           img.style.marginRight = "auto";
           imageContainer.appendChild(img);
+        } else if (block.type === "video") {
+          const video = document.createElement("video");
+          video.src = block.src;
+          video.controls = true;
+          video.style.width = "50%";
+          video.style.display = "block";
+          video.style.margin = "1rem auto";
+          video.style.borderRadius = "4px";
+          imageContainer.appendChild(video);
         }
+
+
     });
 
     document.getElementById("modal").style.display = "block";
