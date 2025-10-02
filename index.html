@@ -150,18 +150,18 @@
     .tag[data-skill="SolidWorks"] { background-color: #0077b6; }
     .tag[data-skill="3D Printing"] { background-color: #ff6f00; }
     .tag[data-skill="Electronics"] { background-color: #6a4c93; }
-    .tag[data-skill="f"] { background-color: #84DCC6; }
+    .tag[data-skill="Laser Cutting"] { background-color: #A62639; }
     .tag[data-skill="NX"] { background-color: #FF4D80; }
     .tag[data-skill="Injection Molding"] { background-color: #BBBDF6; }
     .tag[data-skill="GD&T"] { background-color: #00C49A; }
-    .tag[data-skill="Documentation"] { background-color: #D499B9; }
+    .tag[data-skill="Documentation"] { background-color: #A4036F; }
     .tag[data-skill="Troubleshooting"] { background-color: #72A98F; }
     .tag[data-skill="a"] { background-color: #191308; }
-    .tag[data-skill="b"] { background-color: #BBBDF6; }
-    .tag[data-skill="c&T"] { background-color: #E2ADF2; }
-    .tag[data-skill="d"] { background-color: #006C67; }
+    .tag[data-skill="na"] { background-color: #BBBDF6; }
+    .tag[data-skill="b"] { background-color: #E2ADF2; }
+    .tag[data-skill="Coding"] { background-color: #006C67; }
     .tag[data-skill="3-Axis CNC"] { background-color: #2F97C1; }
-    /* Add more as needed */
+    /* Add more as needed #D499B9 #84DCC6*/ 
 
   </style>
 </head>
@@ -277,24 +277,24 @@
       </div>
       <!-- Add more weekend project cards here -->
       <div class="card" onclick="openModal(9)">
-        <img src="assets/images/project9-thumb.jpg" alt="Weekend Project 9" />
-        <h3>Weekend Project 9</h3>
+        <img src="assets/images/touch-panel/wall.jpg" alt="Capacitive Touch Control Panel" />
+        <h3>Capacitive Touch Control Panel</h3>
       </div>
       <div class="card" onclick="openModal(10)">
-        <img src="assets/images/project10-thumb.jpg" alt="Weekend Project 10" />
-        <h3>Weekend Project 10</h3>
+        <img src="assets/images/project10-thumb.jpg" alt="Laser Cut Topographical Map" />
+        <h3>Laser Cut Topographical Map</h3>
       </div>
       <div class="card" onclick="openModal(11)">
         <img src="assets/images/halloween/halloween-1.jpg" alt="Eye-Tracking Portrait" />
         <h3>Eye-Tracking Portrait</h3>
       </div>
       <div class="card" onclick="openModal(12)">
-        <img src="assets/images/project11-thumb.jpg" alt="Weekend Project 12" />
-        <h3>Weekend Project 12</h3>
+        <img src="assets/images/project11-thumb.jpg" alt="Car Speedform Display" />
+        <h3>Car Speedform Display</h3>
       </div>
       <div class="card" onclick="openModal(13)">
-        <img src="assets/images/project11-thumb.jpg" alt="Weekend Project 13" />
-        <h3>Weekend Project 13</h3>
+        <img src="assets/images/project11-thumb.jpg" alt="Laser Engraved Coasters" />
+        <h3>Laser Engraved Coasters</h3>
       </div>
     </div>
   </section>
@@ -419,18 +419,23 @@
           ]
       },
       {
-          title: "Weekend Project 9",
-          tags: ["Skill0", "Skill1", "Skill2"],
+          title: "Capacitive Touch Control Panel",
+          tags: ["Electronics", "Coding", "Laser Cutting"],
           content: [
-          { type: "text", value: "This project was built to solve X using Y. It involved extensive research and prototyping." },
-          { type: "image", src: "assets/images/project9-1.jpg" },
-          { type: "text", value: "One of the key challenges was integrating with legacy systems, which required custom middleware." },
-          { type: "image", src: "assets/images/project9-1.jpg" }
+          { type: "text", value: "After purchasing a smart speaker for my bedroom, I quickly grew tired of having to pull out my phone, connect to the speaker, open Spofify, and choose a playlist just to start playing music. To reduce this cumbersome startup process down to one single touch, I created a wall-mounted capacitive touch panel with simple controls for eight genres of music." },
+          { type: "text", value: "I was inspired by a guide posted online by someone who had made a similar solution, but I adapted his design considerably. The one thing I kept was the custom PCB, designed with extra-large surfaces to register user input." },
+          { type: "image", src: "assets/images/touch-panel/pcb.jpg" },
+          { type: "text", value: "However, that's where our designs diverged. Instead of using an ESP8266 chip with a separate MPR121 capacitive touch controller, I used an ESP32 chip, which has integrated capacitive touch capabilities (that's a mouthful!). An added benefit of the ESP32 is its support for deep sleep, which enables the batteries to last for months before needing replacements." },
+          { type: "image", src: "assets/images/touch-panel/back.jpg" },
+          { type: "text", value: "The housing for the project was generated using an online tool and laser cut on my laser CNC (see prior project). The front is made of clear 1/8-inch acryllic. With the button labels printed on a normal sheet of paper, the front acrylic is still thin enough to register user input." },
+          { type: "image", src: "assets/images/touch-panel/front.jpg" },
+          { type: "text", value: "With the project mounted on the wall, I can simply tap on a radio station as I enter my bedroom and the music begins playing instantly." },
+          { type: "image", src: "assets/images/touch-panel/wall.jpg" }
           ]
       },
       {
-          title: "Weekend Project 10",
-          tags: ["Skill0", "Skill1", "Skill2"],
+          title: "Laser Cut Topographical Map",
+          tags: ["Laser Cutting"],
           content: [
           { type: "text", value: "This project was built to solve X using Y. It involved extensive research and prototyping." },
           { type: "image", src: "assets/images/project10-1.jpg" },
@@ -440,7 +445,7 @@
       },
       {
           title: "Eye-Tracking Portrait",
-          tags: ["Electronics"],
+          tags: ["Electronics","Coding"],
           content: [
           { type: "text", value: "For this project, I was inspired by portraits in Scooby-Doo films, with eyes that follow the characters across the screen. Built for a Halloween party, this spooky-eyed portrait uses simple HC-SR04 ultraonic sensors and two circular displays to achieve the eye-tracking effect." },
           { type: "image", src: "assets/images/halloween/halloween-1.jpg" },
@@ -451,8 +456,8 @@
           ]
       },
       {
-          title: "Weekend Project 12",
-          tags: ["Skill0", "Skill1", "Skill2"],
+          title: "Car Speedform Display",
+          tags: ["SolidWorks", "3D Printing", "Laser Cutting"],
           content: [
           { type: "text", value: "This project was built to solve X using Y. It involved extensive research and prototyping." },
           { type: "image", src: "assets/images/project11-1.jpg" },
@@ -461,12 +466,12 @@
           ]
       },
       {
-          title: "Weekend Project 13",
+          title: "Laser Engraved Coasters",
           tags: ["Skill0", "Skill1", "Skill2"],
           content: [
-          { type: "text", value: "This project was built to solve X using Y. It involved extensive research and prototyping." },
+          { type: "text", value: "Sometimes even simple projects can be especially meaningful." },
           { type: "image", src: "assets/images/project11-1.jpg" },
-          { type: "text", value: "One of the key challenges was integrating with legacy systems, which required custom middleware." },
+          { type: "text", value: "Words." },
           { type: "image", src: "assets/images/project11-1.jpg" }
           ]
       },
