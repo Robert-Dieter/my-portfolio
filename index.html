@@ -86,9 +86,18 @@
     flex-wrap: wrap;
     gap: 0.5rem;
     margin-bottom: 1rem;
-    margin-left: 1rem;
-
+    /* No left padding for chips on project popups */
     }
+
+    .modal-tag-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+      margin-bottom: 1rem;
+      margin-left: 1rem;
+      /* Left padding for chips on project cards */
+    }
+
 
     .tag {
     padding: 0.3rem 0.6rem;
@@ -441,7 +450,7 @@
       if (!project || !project.tags) return;
 
       const tagContainer = document.createElement("div");
-      tagContainer.className = "tag-container";
+      tagContainer.className = "modal-tag-container";
 
       project.tags.forEach(tag => {
         const span = document.createElement("span");
