@@ -95,7 +95,8 @@
       gap: 0.4rem;
       margin-bottom: 1rem;
       margin-left: 1rem;
-      /* Left padding for chips on project cards */
+      margin-right: 1rem;
+      /* Left and right padding for chips on project cards */
     }
 
 
@@ -149,6 +150,17 @@
     .tag[data-skill="SolidWorks"] { background-color: #0077b6; }
     .tag[data-skill="3D Printing"] { background-color: #ff6f00; }
     .tag[data-skill="CAD"] { background-color: #6a4c93; }
+    .tag[data-skill="3-Axis CNC"] { background-color: #84DCC6; }
+    .tag[data-skill="NX"] { background-color: #FF4D80; }
+    .tag[data-skill="Injection Molding"] { background-color: #BBBDF6; }
+    .tag[data-skill="GD&T"] { background-color: #00C49A; }
+    .tag[data-skill="Documentation"] { background-color: #D499B9; }
+    .tag[data-skill="Troubleshooting"] { background-color: #72A98F; }
+    .tag[data-skill="a"] { background-color: #191308; }
+    .tag[data-skill="b"] { background-color: #BBBDF6; }
+    .tag[data-skill="c&T"] { background-color: #E2ADF2; }
+    .tag[data-skill="d"] { background-color: #006C67; }
+    .tag[data-skill="e"] { background-color: #2F97C1; }
     /* Add more as needed */
 
   </style>
@@ -222,8 +234,8 @@
       </div>
       <!-- Add more major project cards here -->
       <div class="card" onclick="openModal(1)">
-        <img src="assets/images/project1-thumb.jpg" alt="Major Project 1" />
-        <h3>Major Project 1</h3>
+        <img src="assets/images/project1-thumb.jpg" alt="The Cosmic Cone" />
+        <h3>The Cosmic Cone</h3>
       </div>
       <div class="card" onclick="openModal(2)">
         <img src="assets/images/project2-thumb.jpg" alt="Major Project 2" />
@@ -260,8 +272,8 @@
     <div class="grid">
       <!-- Weekend project cards -->
       <div class="card" onclick="openModal(8)">
-        <img src="assets/images/project8-thumb.jpg" alt="Weekend Project 8" />
-        <h3>Weekend Project 8</h3>
+        <img src="assets/images/laser-3.jpg" alt="Laser CNC Restoration" />
+        <h3>Laser CNC Restoration</h3>
       </div>
       <!-- Add more weekend project cards here -->
       <div class="card" onclick="openModal(9)">
@@ -312,8 +324,8 @@
       },
       // Add more project objects here
       {
-          title: "Major Project 1",
-          tags: ["Skill0", "Skill1", "Skill2"],
+          title: "The Cosmic Cone",
+          tags: ["NX", "3-Axis CNC", "Injection Molding", "GD&T"],
           content: [
           { type: "text", value: "This project was built to solve X using Y. It involved extensive research and prototyping." },
           { type: "image", src: "assets/images/project1-1.jpg" },
@@ -382,13 +394,17 @@
           ]
       },
       {
-          title: "Weekend Project 8",
-          tags: ["Skill0", "Skill1", "Skill2"],
+          title: "Laser CNC Restoration",
+          tags: ["Troubleshooting", "Documentation"],
           content: [
-          { type: "text", value: "This project was built to solve X using Y. It involved extensive research and prototyping." },
-          { type: "image", src: "assets/images/project8-1.jpg" },
-          { type: "text", value: "One of the key challenges was integrating with legacy systems, which required custom middleware." },
-          { type: "image", src: "assets/images/project8-1.jpg" }
+          { type: "text", value: "For this project, I was tasked with restoring a fire-damaged Epilog Fusion M2 Laser CNC machine. Following the fire, the laser head was completely seized and would not slide along the x-axis rail."},
+          { type: "text", value: "I began by completely disassembling the x-axis gantry. This process was challenging since no manufacturer schematics were available, so I had to try different ideas and document my progress as I went along." },
+          { type: "image", src: "assets/images/laser-3.jpg" },
+          { type: "text", value: "After removing enough components, the culprit was revealed to be a seized slider bearing. I tracked down the original Chinese supplier, who agreed to supply just one bearing for my unique situation." },
+          { type: "text", value: "I reassembled the gantry using the documentation I created, tested the movement, and fired off a test cut. It worked!" },
+          { type: "image", src: "assets/images/laser-2.jpg" },
+          { type: "text", value: "And in case you don't believe me, here's proof!" },
+          { type: "image", src: "assets/images/laser-1.jpg" }
           ]
       },
       {
