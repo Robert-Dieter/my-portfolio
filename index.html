@@ -156,7 +156,7 @@
     .tag[data-skill="GD&T"] { background-color: #00C49A; }
     .tag[data-skill="Documentation"] { background-color: #A4036F; }
     .tag[data-skill="Troubleshooting"] { background-color: #72A98F; }
-    .tag[data-skill="Report Writing"] { background-color: #84DCC6; }
+    .tag[data-skill="Validation"] { background-color: #84DCC6; }
     .tag[data-skill="FEA"] { background-color: #CE1483; }
     .tag[data-skill="Abaqus"] { background-color: #E2ADF2; }
     .tag[data-skill="Coding"] { background-color: #006C67; }
@@ -250,16 +250,16 @@
         <h3>SolidWorks Portable Clothes Steamer</h3>
       </div>
       <div class="card" onclick="openModal(5)">
-        <img src="assets/images/project5-thumb.jpg" alt="Major Project 5" />
-        <h3>Major Project 5</h3>
+        <img src="assets/images/anvil/anvil.jpg" alt="Sand-Cast Anvil" />
+        <h3>Sand-Cast Anvil</h3>
       </div> 
       <div class="card" onclick="openModal(6)">
-        <img src="assets/images/project6-thumb.jpg" alt="Major Project 6" />
-        <h3>Major Project 6</h3>
+        <img src="assets/images/project6-thumb.jpg" alt="CNC Spindle Bracket" />
+        <h3>CNC Spindle Bracket</h3>
       </div>
       <div class="card" onclick="openModal(7)">
-        <img src="assets/images/project7-thumb.jpg" alt="Major Project 7" />
-        <h3>Major Project 7</h3>
+        <img src="assets/images/project7-thumb.jpg" alt="LEED Construction Visualization" />
+        <h3>LEED Construction Visualization</h3>
       </div> 
     </div>
   </section>
@@ -329,7 +329,7 @@
       // Add more project objects here
       {
           title: "The Cosmic Cone",
-          tags: ["NX", "3-Axis CNC", "Injection Molding", "GD&T", "DFM"],
+          tags: ["NX", "3-Axis CNC", "DFM", "Injection Molding", "GD&T"],
           content: [
           { type: "text", value: "For this project, my team and I designed and manufactured a small product from scratch. After generating our idea for the Cosmic Cone - an ice cream cone featuring the earth and moon - we sketched out the rough geometry and designed it in CAD."},
           { type: "image", src: "assets/images/cosmic-cone/cosmic-cone-5.jpg" },
@@ -363,7 +363,7 @@
       },
       {
           title: "Failure Analysis Simulation",
-          tags: ["Abaqus", "FEA", "Report Writing"],
+          tags: ["Abaqus", "FEA", "Validation"],
           content: [
           { type: "text", value: "For this project, we saught to model a real-world scenario from Northwestern’s concrete lab in which an ultra high-performance concrete (UHPC) slab undergoes an applied load from a piston located overhead. The purpose of this project was to better understand the capabilities of the FEA software Abaqus, along with determining the effects of certain modeling assumptions on the results." },
           { type: "text", value: "In the lab, the test subject is a 32x32x2.75-inch UHPC slab, characterized by ~1cm long steel fibers randomly distributed throughout. As such, the material is assumed to be isotropic." },
@@ -388,17 +388,17 @@
           tags: ["SolidWorks"],
           content: [
           { type: "text", value: "Before going to Northwestern, I had experience with solid modeling in Fusion 360. Eager to explore another CAD software, I enrolled in a class for SolidWorks. Throughout the class, we learned big-picture paradigms (e.g. solid modeling vs surface modeling) in addition to the nitty-gritty tools and specifics unique to the SolidWorks platform." },
-          { type: "text", value: "In the class, we began by modeling simple objects and then increasing in difficulty as we progressed and learned new tools. Some of our exciting projects were an expandable boot concept..." },
+          { type: "text", value: "In the class, we began by modeling simple objects, which increased in difficulty as we progressed and learned new tools. Some of our exciting projects were an expandable boot concept..." },
           { type: "image", src: "assets/images/solidworks/boot.jpg" },
-          { type: "text", value: "A Method blue bottle..." },
+          { type: "text", value: "a Method bottle..." },
           { type: "image", src: "assets/images/solidworks/method-bottle.jpg" },
-          { type: "text", value: "And the iconic Tide detergent bottle." },
+          { type: "text", value: "and the iconic Tide detergent bottle." },
           { type: "image", src: "assets/images/solidworks/tide.jpg" },
           { type: "text", value: "After learning all these tools, we were challenged to apply the same skills by modeling another object on our own. I chose to model a portable clothes steamer I had in my dorm room." },
           { type: "image", src: "assets/images/solidworks/side.jpg" },
           { type: "text", value: "I approached the steamer using the framework we learned in class. First, I captured orthographic views and measured a key dimension to scale the reference images in SolidWorks." },
           { type: "image", src: "assets/images/solidworks/ortho.jpg" },
-          { type: "text", value: "Next, I identified the base feature, origin placement, and surface modeling features, employing two primary lofts. " },
+          { type: "text", value: "Next, I identified the base feature, origin placement, and surface modeling features. I employed two primary lofts to rough out the general form. " },
           { type: "image", src: "assets/images/solidworks/progress.jpg" },
           { type: "text", value: "After executing my plan to achieve the primary geometry, it was simply a matter of adding the details: the power switch, finger notches, clear window, and steam vent grille/holes. The final design mirrors the original object remarkably well." },
           { type: "image", src: "assets/images/solidworks/steamer.jpg" },
@@ -406,17 +406,26 @@
           ]
       },
       {
-          title: "Major Project 5",
-          tags: ["Skill0", "Skill1", "Skill2"],
+          title: "Sand-Cast Anvil",
+          tags: ["Casting"],
           content: [
-          { type: "text", value: "This project was built to solve X using Y. It involved extensive research and prototyping." },
-          { type: "image", src: "assets/images/project5-1.jpg" },
-          { type: "text", value: "One of the key challenges was integrating with legacy systems, which required custom middleware." },
-          { type: "image", src: "assets/images/project5-1.jpg" }
+          { type: "text", value: "For this project, my team and I sought to understand how to manufacture items using sand casting. In general, sand casting involves pouring molten metal into a mold composed of densely-packed sand and binders to form a part with high precision and sophisticated geometric features. Here, my team made a small anvil from a tin-antimony-copper alloy. An existing wooden anvil pattern was utilized." },
+          { type: "text", value: "First, the drag was packed tightly with greensand over the pattern. Then, the cope was packed over the pattern with the sprue and riser blocks to create flow paths. The sprue and riser blocks were removed after packing."},
+          { type: "image", src: "assets/images/anvil/sprue-riser.jpg" },
+          { type: "text", value: "Connecting channels were manually scraped with a brush." },
+          { type: "image", src: "assets/images/anvil/connecting.jpg" },
+          { type: "text", value: "Lastly, the cope and drag were matched (with the pattern removed) and molten pewter was poured into the cavity. After a short cooling time, the riser and sprue fill were bent off, leaving the final casting. The riser is shown still attached in the photo below." },
+          { type: "image", src: "assets/images/anvil/finished.jpg" },
+          { type: "image", src: "assets/images/anvil/riser.jpg" },
+          { type: "text", value: "The melting and freezing temperatures over time were recorded, which could be used for future process improvement." },
+          { type: "image", src: "assets/images/anvil/graphs.jpg" },
+          { type: "text", value: "In my opinion, hands-on experience is the best way to learn new manufacturing methods. Creating a small part using sand casting adds another valuable tool to my repertoire." },
+          { type: "image", src: "assets/images/anvil/anvil.jpg" },
+          { type: "text", value: "My team's full report can be downloaded <a href='assets/images/anvil/casting-lab-report.pdf' target='_blank'>here</a>." }
           ]
       },
       {
-          title: "Major Project 6",
+          title: "CNC Spindle Bracket",
           tags: ["Skill0", "Skill1", "Skill2"],
           content: [
           { type: "text", value: "This project was built to solve X using Y. It involved extensive research and prototyping." },
@@ -426,7 +435,7 @@
           ]
       },
       {
-          title: "Major Project 7",
+          title: "LEED Construction Visualization",
           tags: ["Skill0", "Skill1", "Skill2"],
           content: [
           { type: "text", value: "This project was built to solve X using Y. It involved extensive research and prototyping." },
@@ -478,7 +487,7 @@
       },
       {
           title: "Eye-Tracking Portrait",
-          tags: ["Electronics","Coding"],
+          tags: ["Electronics","Coding","CircuitPython"],
           content: [
           { type: "text", value: "For this project, I was inspired by portraits in Scooby-Doo films, with eyes that slowly follow the characters across the room. Built for a Halloween party, this spooky-eyed portrait uses simple HC-SR04 ultraonic sensors and two circular displays to achieve the eye-tracking effect." },
           { type: "image", src: "assets/images/halloween/halloween-1.jpg" },
@@ -496,11 +505,11 @@
           { type: "text", value: "One fun feature of the Phantom Goldfinger is the 18-carat gold Phantom speedform hidden in a vault in the center console." },
           { type: "image", src: "assets/images/speedform/inspiration.jpg" },
           { type: "text", value: "Ironically, my plebeian car has a blank hole in the center console, which is normally used as a storage area. To capture the essence of the Rolls Royce speedform on a shoestring budget, I decided to recreate a similar display in my car for fun." },
-          { type: "text", value: "Since the storage pocket is oddly shaped, I had to capture the exact geometry in CAD. Of course, modern iPhones have lidar scanners, but even that was overkill. Instead, I opted for the old-fashioned method of tracing the tray on grid paper." },
+          { type: "text", value: "Although the storage pocket is oddly shaped, I still had to capture the exact geometry for CAD. Of course, modern iPhones have lidar scanners, but even that was overkill. Instead, I opted for the old-fashioned method of tracing the tray on grid paper." },
           { type: "image", src: "assets/images/speedform/trace.jpg" },
           { type: "text", value: "At this point, I imported a picture of the trace into SolidWorks as a reference image, quickly sketched the geometry, and laser cut the corresponding parts." },
           { type: "image", src: "assets/images/speedform/solidworks.jpg" },
-          { type: "text", value: "Instead of using my own car for the speedform, I opted for the Audi R8 - same manufacturer, but slightly faster than my model! I simply 3D-printed the R8, applied metallic spray paint, and glued it to the laser-cut acrylic. Seeing the speedform's perfect integration into my car's center console, you might be surprised to learn you weren't being chauffeured in the latest bespoke Rolls Royce!" },
+          { type: "text", value: "Instead of using my own car for the speedform, I opted for the Audi R8 - same manufacturer, but slightly faster than my model! I simply 3D-printed the R8, applied metallic spray paint, and glued it to the laser-cut acrylic base. Seeing the speedform's perfect integration into my car's center console, you might be surprised to learn you weren't being chauffeured in the latest bespoke Rolls Royce!" },
           { type: "image", src: "assets/images/speedform/side.jpg" }
           ]
       },
