@@ -156,12 +156,12 @@
     .tag[data-skill="GD&T"] { background-color: #00C49A; }
     .tag[data-skill="Documentation"] { background-color: #A4036F; }
     .tag[data-skill="Troubleshooting"] { background-color: #72A98F; }
-    .tag[data-skill="a"] { background-color: #191308; }
-    .tag[data-skill="na"] { background-color: #BBBDF6; }
-    .tag[data-skill="b"] { background-color: #E2ADF2; }
+    .tag[data-skill="Report Writing"] { background-color: #84DCC6; }
+    .tag[data-skill="FEA"] { background-color: #CE1483; }
+    .tag[data-skill="Abaqus"] { background-color: #E2ADF2; }
     .tag[data-skill="Coding"] { background-color: #006C67; }
     .tag[data-skill="3-Axis CNC"] { background-color: #2F97C1; }
-    /* Add more as needed #D499B9 #84DCC6*/ 
+    /* Add more as needed #D499B9 #84DCC6 #191308*/ 
 
   </style>
 </head>
@@ -242,8 +242,8 @@
         <h3>Major Project 2</h3>
       </div>
       <div class="card" onclick="openModal(3)">
-        <img src="assets/images/project3-thumb.jpg" alt="Major Project 3" />
-        <h3>Major Project 3</h3>
+        <img src="assets/images/abaqus-slab/simulation.jpg" alt="Failure Analysis Simulation" />
+        <h3>Failure Analysis Simulation</h3>
       </div>
       <div class="card" onclick="openModal(4)">
         <img src="assets/images/project4-thumb.jpg" alt="Major Project 4" />
@@ -355,13 +355,25 @@
           ]
       },
       {
-          title: "Major Project 3",
-          tags: ["Skill0", "Skill1", "Skill2"],
+          title: "Failure Analysis Simulation",
+          tags: ["Abaqus", "FEA", "Report Writing"],
           content: [
-          { type: "text", value: "This project was built to solve X using Y. It involved extensive research and prototyping." },
-          { type: "image", src: "assets/images/project3-1.jpg" },
-          { type: "text", value: "One of the key challenges was integrating with legacy systems, which required custom middleware." },
-          { type: "image", src: "assets/images/project3-1.jpg" }
+          { type: "text", value: "For this project, we saught to model a real-world scenario from Northwestern’s concrete lab in which an ultra high-performance concrete (UHPC) slab undergoes an applied load from a piston located overhead. The purpose of this project was to better understand the capabilities of the FEA software Abaqus, along with determining the effects of certain modeling assumptions on the results." },
+          { type: "text", value: "In the lab, the test subject is a 32x32x2.75-inch UHPC slab, characterized by ~1cm long steel fibers randomly distributed throughout. As such, the material is assumed to be isotropic." },
+          { type: "image", src: "assets/images/abaqus-slab/fibers.jpg" },
+          { type: "text", value: "The real-world testing apparatus is a displacement-controlled piston arm with a 2-inch radius, which we modeled as a 3D deformable homogeneous solid extrusion." },
+          { type: "image", src: "assets/images/abaqus-slab/testing.jpg" },
+          { type: "text", value: "UHPC behaves as a quasi-brittle material. Displaying characteristics of both brittle and ductile materials, UHPC can undergo some minor deformation before fracturing, but then fail suddenly, as shown on the stress-strain curve below. Furthermore, in quasi-brittle materials, fracture occurs in a region where multiple crack initiations collide. (Unlike in brittle materials, where fracture occurs as a point, and in ductile materials, where the failure is plastic)." },
+          { type: "image", src: "assets/images/abaqus-slab/stress-strain.jpg" },
+          { type: "text", value: "For the purposes of this project, we simplified the analysis by treating UHPC as a brittle material, as that behavior aligns most closely with the test subject. " },
+          { type: "image", src: "assets/images/abaqus-slab/slab.jpg" },
+          { type: "text", value: "Using these assumptions, we performed our Abaqus analysis." },
+          { type: "image", src: "assets/images/abaqus-slab/simulation.jpg" },
+          { type: "text", value: "To validate our results, we recalled the primary cracks appearing along the concrete slab’s axis of symmetry (where the bending moments are greatest), with additional cracks emanating radially from the center. This pattern is also achieved using concrete element deletion in the Abaqus model." },
+          { type: "text", value: "However, one shortcoming of our model was that the maximum applied force value of 468.5 lbs, which is about 70% less than the observed experimental value of ~1500 lbs. More than likely, this phenomenon can again be explained by the assumption made earlier to model UHPC as a brittle material instead of a quasi-brittle material, so a lower predicted value than reality is reasonable." },
+          { type: "image", src: "assets/images/abaqus-slab/force-displacement.jpg" },
+          { type: "text", value: "Ultimately, several aspects of these results suggest that a UHPC slab under such loading conditions can be modeled somewhat successfully in Abaqus. The force/displacement curve displays brittle behavior, which is what it was idealized to be. Since the concrete plate, in reality, is a quasi-brittle material, an ultimate failure load lower than the experimental value (1500 lbs) was expected. Finally, the crack pattern on the deformed shape mirrors the experimentally observed failure behavior as well." },
+          { type: "text", value: "My team's full report can be downloaded <a href='assets/images/abaqus-slab/CEE328-Final-Report.pdf' target='_blank'>here</a>." }
           ]
       },
       {
