@@ -237,26 +237,25 @@
       <div class="card" onclick="openModal(1)">
         <img src="assets/images/cosmic-cone/cosmic-cone-4.jpg" alt="The Cosmic Cone" />
         <h3>The Cosmic Cone</h3>
-      </div>
-      <div class="card" onclick="openModal(2)">
-        <img src="assets/images/pid/thumb.jpg" alt="PIC32 PID Controller" />
-        <h3>PIC32 PID Controller</h3>
-      </div>
-      <div class="card" onclick="openModal(3)">
+      </div><div class="card" onclick="openModal(2)">
         <img src="assets/images/abaqus-slab/simulation.jpg" alt="Failure Analysis Simulation" />
         <h3>Failure Analysis Simulation</h3>
       </div>
-      <div class="card" onclick="openModal(4)">
+      <div class="card" onclick="openModal(3)">
         <img src="assets/images/solidworks/steamer.jpg" alt="SolidWorks Portable Clothes Steamer" />
         <h3>SolidWorks Portable Clothes Steamer</h3>
       </div>
-      <div class="card" onclick="openModal(5)">
+      <div class="card" onclick="openModal(4)">
         <img src="assets/images/anvil/anvil.jpg" alt="Sand-Cast Anvil" />
         <h3>Sand-Cast Anvil</h3>
       </div> 
-      <div class="card" onclick="openModal(6)">
+      <div class="card" onclick="openModal(5)">
         <img src="assets/images/cnc-bracket/iso.jpg" alt="CNC Spindle Bracket" />
         <h3>CNC Spindle Bracket</h3>
+      </div>
+      <div class="card" onclick="openModal(6)">
+        <img src="assets/images/pid/thumb.jpg" alt="PIC32 PID Controller" />
+        <h3>PIC32 PID Controller</h3>
       </div>
       <div class="card" onclick="openModal(7)">
         <img src="assets/images/leed/leed.png" alt="LEED Building Analysis" />
@@ -346,23 +345,6 @@
           ]
       },
       {
-          title: "PIC32 PID Controller",
-          tags: ["Coding", "C", "Python", "Electronics"],
-          content: [
-          { type: "text", value: "For a high-level electronics course offered in the Mechanical Engineering department at Northwestern, I was tasked with creating my own Proportional–Integral–Derivative (PID) controller. In general, the PID controller is a common control loop tool that continuously monitors a datum and provides corrections based on the feedback. It is used in all sorts of industrial equipment, making it a highly relevant project for MechE's. Here, I employ it for position control of a motor." },
-          { type: "image", src: "assets/images/pid/motor.jpg" },
-          { type: "text", value: "Provided with necessary eletronic components like Microchip Technology's PIC32 and a Raspberry Pi Pico, I first organized my methodology by annotating a block diagram for motion control. Since multiple communication protocols are used (e.g. UART, I2C, etc.), I included those as well." },
-          { type: "image", src: "assets/images/pid/block.jpg" },
-          { type: "text", value: "C is - by far - my least favorite programming language, and I don't pretend to be any good at it. However, I will admit that using C with the PIC32 enables some special features, like varying-priority timer-based interrupts for current and position control." },
-          { type: "text", value: "I used the DRV8835 H-bridge as the motor driver. Shown below is a quick sketch of the wiring diagram for the H-bridge." },
-          { type: "image", src: "assets/images/pid/h-bridge.jpg" },
-          { type: "text", value: "On the client side, Python was used as the user interface. It has bidirectional communication with the Pico, enabling features such as modifying the control gains." },
-          { type: "image", src: "assets/images/pid/python.jpg" },
-          { type: "text", value: "Here's a demo highlighting key features of the working project." },
-          { type: "video", src: "assets/images/pid/pid-demo.mp4"},
-          ]
-      },
-      {
           title: "Failure Analysis Simulation",
           tags: ["Abaqus", "FEA", "Validation"],
           content: [
@@ -443,6 +425,23 @@
           { type: "text", value: "We were offered the opportunity to refine our design, but we made only minor adjustments." },
           { type: "image", src: "assets/images/cnc-bracket/iso.jpg" },
           { type: "text", value: "My team's full report can be downloaded <a href='assets/images/cnc-bracket/bracket-final-report.docx' target='_blank'>here</a>." }
+          ]
+      },
+      {
+          title: "PIC32 PID Controller",
+          tags: ["Coding", "C", "Python", "Electronics"],
+          content: [
+          { type: "text", value: "For a high-level electronics course offered in the Mechanical Engineering department at Northwestern, I was tasked with creating my own Proportional–Integral–Derivative (PID) controller. In general, the PID controller is a common control loop tool that continuously monitors a datum and provides corrections based on the feedback. It is used in all sorts of industrial equipment, making it a highly relevant project for MechE's. Here, I employ it for position control of a motor." },
+          { type: "image", src: "assets/images/pid/motor.jpg" },
+          { type: "text", value: "Provided with necessary eletronic components like Microchip Technology's PIC32 and a Raspberry Pi Pico, I first organized my methodology by annotating a block diagram for motion control. Since multiple communication protocols are used (e.g. UART, I2C, etc.), I included those as well." },
+          { type: "image", src: "assets/images/pid/block.jpg" },
+          { type: "text", value: "C is - by far - my least favorite programming language, and I don't pretend to be any good at it. However, I will admit that using C with the PIC32 enables some special features, like varying-priority timer-based interrupts for current and position control." },
+          { type: "text", value: "I used the DRV8835 H-bridge as the motor driver. Shown below is a quick sketch of the wiring diagram for the H-bridge." },
+          { type: "image", src: "assets/images/pid/h-bridge.jpg" },
+          { type: "text", value: "On the client side, Python was used as the user interface. It has bidirectional communication with the Pico, enabling features such as modifying the control gains." },
+          { type: "image", src: "assets/images/pid/python.jpg" },
+          { type: "text", value: "Here's a demo highlighting key features of the working project." },
+          { type: "video", src: "assets/images/pid/pid-demo.mp4"},
           ]
       },
       {
