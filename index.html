@@ -238,8 +238,8 @@
         <h3>The Cosmic Cone</h3>
       </div>
       <div class="card" onclick="openModal(2)">
-        <img src="assets/images/project2-thumb.jpg" alt="Major Project 2" />
-        <h3>Major Project 2</h3>
+        <img src="assets/images/pid/thumb.jpg" alt="PIC32 PID Controller" />
+        <h3>PIC32 PID Controller</h3>
       </div>
       <div class="card" onclick="openModal(3)">
         <img src="assets/images/abaqus-slab/simulation.jpg" alt="Failure Analysis Simulation" />
@@ -345,13 +345,20 @@
           ]
       },
       {
-          title: "Major Project 2",
-          tags: ["Skill0", "Skill1", "Skill2"],
+          title: "PIC32 PID Controller",
+          tags: ["Coding", "C", "Python", "Electronics"],
           content: [
-          { type: "text", value: "This project was built to solve X using Y. It involved extensive research and prototyping." },
-          { type: "image", src: "assets/images/project2-1.jpg" },
-          { type: "text", value: "One of the key challenges was integrating with legacy systems, which required custom middleware." },
-          { type: "image", src: "assets/images/project2-1.jpg" }
+          { type: "text", value: "For a high-level electronics course offered in the Mechanical Engineering department at Northwestern, I was tasked with creating my own Proportional–Integral–Derivative (PID) controller. In general, the PID controller is a common control loop tool that continuously monitors a datum and provides corrections based on the feedback. It is used in all sorts of industrial equipment, making it a highly relevant project for MechE's. Here, I employ it for position control of a motor." },
+          { type: "image", src: "assets/images/pid/motor.jpg" },
+          { type: "text", value: "Provided with necessary eletronic components like Microchip Technology's PIC32 and a Raspberry Pi Pico, I first organized my methodology by annotating a block diagram for motion control. Since multiple communication protocols are used (e.g. UART, I2C, etc.), I included those as well." },
+          { type: "image", src: "assets/images/pid/block.jpg" },
+          { type: "text", value: "C is - by far - my least favorite programming language, and I don't pretend to be any good at it. However, I will admit that using C with the PIC32 enables some special features, like varying-priority timer-based interrupts for current and position control." },
+          { type: "text", value: "I used the DRV8835 H-bridge as the motor driver. Shown below is a quick sketch of the wiring diagram for the H-bridge." },
+          { type: "image", src: "assets/images/pid/h-bridge.jpg" },
+          { type: "text", value: "On the client side, Python was used as the user interface. It has bidirectional communication with the Pico, enabling features such as modifying the control gains." },
+          { type: "image", src: "assets/images/pid/python.jpg" },
+          { type: "text", value: "Here's a demo highlighting key features of the working project." },
+          { type: "video", src: "assets/images/pid/pid-demo.mp4"},
           ]
       },
       {
