@@ -161,6 +161,7 @@
     .tag[data-skill="Abaqus"] { background-color: #E2ADF2; }
     .tag[data-skill="Coding"] { background-color: #006C67; }
     .tag[data-skill="3-Axis CNC"] { background-color: #2F97C1; }
+    .tag[data-skill="DFM"] { background-color: #1F2041; }
     /* Add more as needed #D499B9 #84DCC6 #191308*/ 
 
   </style>
@@ -254,7 +255,7 @@
         <h3>Sand-Cast Anvil</h3>
       </div> 
       <div class="card" onclick="openModal(6)">
-        <img src="assets/images/project6-thumb.jpg" alt="CNC Spindle Bracket" />
+        <img src="assets/images/cnc-bracket/iso.jpg" alt="CNC Spindle Bracket" />
         <h3>CNC Spindle Bracket</h3>
       </div>
       <div class="card" onclick="openModal(7)">
@@ -426,12 +427,22 @@
       },
       {
           title: "CNC Spindle Bracket",
-          tags: ["Skill0", "Skill1", "Skill2"],
+          tags: ["NX", "3D Printing", "FEA", "Validation"],
           content: [
-          { type: "text", value: "This project was built to solve X using Y. It involved extensive research and prototyping." },
-          { type: "image", src: "assets/images/project6-1.jpg" },
-          { type: "text", value: "One of the key challenges was integrating with legacy systems, which required custom middleware." },
-          { type: "image", src: "assets/images/project6-1.jpg" }
+          { type: "text", value: "For this project, my team and I sought to design a bracket to attach a spindle motor to a CNC machine. The bracked needed sufficient space to embed a small sensor to measure deflections during machining. Otherwise, the goal was simple: reduce weight while keeping deflections at the tool's tip less than 2.0mm under maximum load." },
+          { type: "text", value: "As is common in the design process, we began by sketching the rough geometry for the bracket. Four legs near the outer geometric boundary add resistance to bending, while subtle curves allow access to bolt holes (and they look cool!)." },
+          { type: "image", src: "assets/images/cnc-bracket/sketch.jpg" },
+          { type: "text", value: "From here, we designed the part in CAD and performed hand calcs on a cross-section to estimate the maximum deflection." },
+          { type: "image", src: "assets/images/cnc-bracket/cad.jpg" },
+          { type: "text", value: "Next, we performed finite element analysis using NX's built-in tools." },
+          { type: "image", src: "assets/images/cnc-bracket/fea.jpg" },
+          { type: "text", value: "After performing the analysis, it was time to fabricate the bracket. We 3D Printed the bracket on a Formlabs SLS machine using nylon, then added the necessary fasteners." },
+          { type: "image", src: "assets/images/cnc-bracket/top.jpg" },
+          { type: "text", value: "We loaded the bracket onto the CNC machine, applied a load, and measured the deflection. At .5334mm in the Z direction and 1.245mm in the X direction, our design met the target!" },
+          { type: "image", src: "assets/images/cnc-bracket/cnc.jpg" },
+          { type: "text", value: "We were offered the opportunity to refine our design, but we made only minor adjustments." },
+          { type: "image", src: "assets/images/cnc-bracket/iso.jpg" },
+          { type: "text", value: "My team's full report can be downloaded <a href='assets/images/cnc-bracket/bracket-final-report.docx' target='_blank'>here</a>." }
           ]
       },
       {
